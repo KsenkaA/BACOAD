@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>    
+  {% load staticfiles %}
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <style type="text/css">
+    .auth{
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 190%;
+  color: #265259;
+  margin: 2px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.ad{
+  -webkit-box-sizing: border-box;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(400px, 650px));
+  grid-column-gap: 10px;
+  justify-content: space-around;
+  margin-top: 40px;
+
+}
+
+  </style>
+  <link href={% static 'new_search.css' %} rel='stylesheet'>
+</head>
+<body>
+	<div class='header'>
+		<div class='logo'>
+			<a href="/index/search_form/"><img src="http://www.picshare.ru/uploads/180224/KW1NsxDhiK.png" style="height: 60px; width: 330px;padding: 5px" /></a>
+		</div>
+	</div>
+  <div class='container'>
+  		<div class='content'>
+        <div style='text-align: center;'>&nbsp;</div>
+        <p class='auth'><strong>Результаты поиска по вашему запросу:</strong></p>
+            {% for animal in animals %}
+            <div class='ad'>
+              <div class="photo" style="display: flex; flex-direction: row; margin: auto;">{% load static %}<img src="/media/{{animal.photo.name}}" height="260" width="260" style=" border-radius:50%;"></div>
+              <div class='text'>
+                <p><strong>Порода:</strong>  {{ animal.breed }}</p>
+                <p><strong>Пол:</strong> {{ animal.sex }}</p>
+                <p><strong>Город:</strong> {{ animal.city }}</p>
+                <p><strong>Цена:</strong> {{ animal.price }}</p>
+                <p><strong>Возраст:</strong> {{ animal.age }}</p>
+                <p><strong>Размер:</strong>  {{ animal.size }}</p>
+                <p><strong>Выставочный питомец:</strong> {% if animal.competition == True %} Да {% else %} Нет {% endif %}</p>
+                <p ><strong>Паспорт:</strong> {% if animal.passport == True %} Есть {% else %} Нет {% endif %}</p>
+                <p><strong>Хозяин:</strong> {{ animal.owner }}</p>
+                <p><strong>Номер телефона хозяина:</strong> {{ animal.phone }}</p>
+              </div>
+            </div>
+            {% endfor %}
+      </div>
+  </div>
+  </body>
+</html>

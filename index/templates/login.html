@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <style>
+        html,
+body {
+  height: 100%;
+}
+.ksenka{
+    background: url("https://b.radikal.ru/b01/1801/ae/7ec4087f328a.jpg");
+    background-size: 100% 100%
+}
+
+body {
+  background: url("https://b.radikal.ru/b01/1801/ae/7ec4087f328a.jpg");
+  background-size: 100% 100%
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+    </style>
+  </head>
+
+  <body>
+  <div style="width:100%; height: 10%; background-color: #202022;">
+      <div style="width: 30%; height: 100%; background-color: #202022; text-align: center;">
+
+          <img src="https://c.radikal.ru/c06/1801/1f/c7693cfcf92a.png" height="65px" width="65px" style="margin-top: -28px">
+          <font style="width: 100%; font-family: 'Exo 2', sans-serif; font-size: 270%; text-align: center; margin-left:10px" color="white">Bacoad</font>
+      </div>
+  </div>
+  <div style="height: 5%"></div>
+    <div style="background-color: white; width: 50%; padding: 0px; margin: 0px auto; height: 80%">
+        <div style="height:10%"></div>
+        <div style="width: 35%; padding: 0px; margin: 0px auto;">
+    <form class="form-signin" method="post" style="height: 60%">
+      {% csrf_token %}
+      <img class="d-block mx-auto mb-4" src="https://c.radikal.ru/c06/1801/1f/c7693cfcf92a.png" alt="" width="150" height="150">
+        <p>{{ form.username.errors }}</p>
+        <label style="text-align: center; font-family: 'Roboto Condensed', sans-serif; font-size: 140%;">Логин</label>
+        <div style="text-align: center">{{ form.username }}</div>
+        {{ form.password.errors }}
+        <br>
+        <label style="text-align: center; font-family: 'Roboto Condensed', sans-serif; font-size: 140%;">Пароль</label>
+        <div style="text-align: center">{{ form.password }}</div>
+        <br>
+      <button style="color: #202022; width: 100%; margin-bottom:30px; border-radius: 5px; height: 35px; background-color: #E0FFFF; font-family: 'Roboto Condensed', sans-serif; font-size: 120%; margin:auto;">Вход</button>
+      <p class="mt-5 mb-3 text-muted"></p>
+    </form>
+            </div>
+        </div>
+  </body>
+
+</html>

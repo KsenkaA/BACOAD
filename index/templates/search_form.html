@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+<style>
+     body{
+ font-family: 'Open Sans', sans-serif!important;
+ font-size: 16px;
+ }
+</style>
+    <p>{% if user.is_authenticated %}
+  <p>Добро пожаловать, {{ user.username }}. Спасибо, что не забываете нас.</p>
+{% else %}
+  <p>Добро пожаловать, незнакомец. Кто вы?</p>
+{% endif %}</p>
+    <form action="/index/search/" method="get">
+        <p>тип</p>
+        <input type="text" name="type">
+        <p>breed</p>
+        <input type="text" name="breed">
+        <p>city</p>
+        <input type="text" name="city">
+        <p>price</p>
+        <input type="text" name="price">
+        <p>age</p>
+        <input type="text" name="age">
+        <p>sex</p>
+        <input type="text" name="sex">
+        <p>competition</p>
+        <input type="checkbox" name="competition">
+        <p>size</p>
+        <input type="text" name="size">
+        <p>owner</p>
+        <input type="text" name="owner">
+        <p>passport</p>
+        <input type="checkbox" name="passport">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

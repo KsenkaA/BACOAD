@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://a.radikal.ru/a21/1801/a2/c4a4175ae5e2.png">
+
+
+    <title>Регистрация</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+      <style type="text/css">
+          .container {
+          background-color: white;
+  width: 500px;
+}
+.ksenka{
+    background: url("https://b.radikal.ru/b01/1801/ae/7ec4087f328a.jpg");
+    background-size: 100% 100%
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top-gray { border-top-color: #adb5bd; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.lh-condensed { line-height: 1.25; }
+
+      </style>
+  </head>
+
+  <body class="ksenka">
+  <div style="width:100%; height: 10%; background-color: #202022;">
+      <div style="width: 30%; height: 100%; background-color: #202022; text-align: center;">
+
+          <img src="https://c.radikal.ru/c06/1801/1f/c7693cfcf92a.png" height="65px" width="65px" style="margin-top: -28px">
+          <font style="width: 100%; font-family: 'Exo 2', sans-serif; font-size: 270%; text-align: center; margin-left:10px" color="white">Bacoad</font>
+      </div>
+  </div>
+  <div style="width:100%; height:40px;">
+
+  </div>
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://c.radikal.ru/c06/1801/1f/c7693cfcf92a.png" alt="" width="100" height="100">
+        <h2 style="font-family: 'Roboto Condensed', sans-serif;', sans-serif;">Регистрация</h2>
+        
+      </div>
+
+
+            <form method="post" action="/index/signup/"> {% csrf_token %}
+            <div class="mb-3" >
+              <label for="nick-name" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; " >Придумайте ник<span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="nick-name" name='username' placeholder="Enter your nick-name" style="font-family: 'Roboto Condensed', sans-serif;">
+            </div>
+                <p style="font-size: 90%; " ><font color="lightpink">{{ message }}</font></p>
+
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                  <div style="width: 470px;">
+                <label for="country" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Кто вы?</label>
+                <select class="custom-select d-block w-100" id="country" name="who" required style="font-family: 'Roboto Condensed', sans-serif;">
+                  <option value="" >Choose...</option>
+                  <option>Заводчик</option>
+                  <option>Пользователь</option>
+                  <option>Приют</option>
+                </select> </div> </div> </div>
+
+
+            <div class="mb-3">
+              <label for="first-name" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Введите имя<span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="first-name" name='first_name' placeholder="first-name" style="font-family: 'Roboto Condensed', sans-serif;">
+            </div>
+
+
+            <div class="mb-3">
+              <label for="second-name" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Введите фамилию<span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="second-name" name='last_name' placeholder="second-name" style="font-family: 'Roboto Condensed', sans-serif;">
+            </div>
+
+      
+            <div class="mb-3">
+              <label for="email" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" style="font-family: 'Roboto Condensed', sans-serif;">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Введите пароль</label>
+              <input type="password" class="form-control" id="password" name="password1" placeholder="Enter password" required style="font-family: 'Roboto Condensed', sans-serif;">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password2" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">Подтвердите пароль<span class="text-muted"></span></label>
+              <input type="password" class="form-control" id="password2" name="password2" placeholder="Password confirmation" style="font-family: 'Roboto Condensed', sans-serif;"></div>
+
+                <br>
+
+            <button style="color: #202022; width: 100%; margin-bottom:30px; border-radius: 5px; height: 35px; background-color: #E0FFFF; font-family: 'Roboto Condensed', sans-serif; font-size: 120%; ">
+                Отправить
+            </button>
+            </form>
+        <p> </p>
+           
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="popper.min.js"></script>
+    <script src="C:\Users\ksenk\PycharmProjects\bacoad\index\templates\bootstrap.min.js"></script>
+    <script src="C:\Users\ksenk\PycharmProjects\bacoad\index\templates\bootstrap-4.0.0-alpha.6\docs\assets\js\vendor\holder.min.js"></script>
+    </div>
+  </body>
+</html>

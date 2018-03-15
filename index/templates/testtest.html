@@ -1,0 +1,425 @@
+<! DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+    <title>BACOAD</title>
+    <link rel="icon" href="https://a.radikal.ru/a21/1801/a2/c4a4175ae5e2.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="icon" href="https://a.radikal.ru/a21/1801/a2/c4a4175ae5e2.png">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Russo+One&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+
+
+ .row {
+	margin: 0 !important;
+}
+
+.container-fluid {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+	background-color: #ccc;
+	margin: 0px;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	margin:0px;
+}
+
+.header {
+	width: 100%;
+	height: 10%;
+	background: #ccc;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 30%;
+	height: 100%;
+	background-color: #ccc;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.menu {
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.menua {
+	width: 20%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	float: right;
+}
+.menushka {
+	width: 10%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	float: right;
+}
+.menua a {
+	padding: 15px;
+	text-decoration: none;
+	color: #202022;
+	font-size: 24px;
+
+}
+
+.blocka {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+.zagalovok {
+	width: 100%;
+	height: 25%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.texta {
+	width:100%;
+	height: 20%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.flx {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.flx .forflex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.custom-select {
+	width: 178;
+	height: 10%
+}
+
+.varg {
+	display: none;
+}
+
+.ksenka{
+    background: url("https://b.radikal.ru/b01/1801/ae/7ec4087f328a.jpg");
+    background-size: 100% 100%
+}
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px 'Open Sans', Arial, sans-serif;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.butt {
+   -webkit-transform-origin: 50% 1px;
+   -webkit-transition: all 0.15s ease-in-out;
+  background:  #E0FFFF;
+  border-color: #778899 #778899 #778899 #778899;
+   border-style: solid;
+  border-width: 1px 4px 1px 1px;
+  display:block;
+  width:90px;
+  font-family: Open Sans, Sans-serif;
+   font-size: 13px;
+  letter-spacing: 4px;
+  text-shadow: rgb(0, 0, 0) 0px 0px 1px;
+  line-height: 30px;
+  position: relative;
+ margin: 20px auto;
+  text-align: center;
+  text-decoration:none;
+}
+.buttonns {
+  padding: 13% 11px;
+   -webkit-transform-origin: 50% 1px;
+   -webkit-transition: all 0.15s ease-in-out;
+  background:  #E0FFFF;
+  border-color: #778899 #778899 #778899 #778899;
+   border-style: solid;
+  border-width: 1px 4px 1px 1px;
+  display:block;
+  width:178;
+  font-family: Open Sans, Sans-serif;
+   font-size: 13px;
+  letter-spacing: 4px;
+  text-shadow: rgb(0, 0, 0) 0px 0px 1px;
+  line-height: 30px;
+  position: relative;
+ margin: 20px auto;
+  text-align: center;
+  text-decoration:none;
+}
+.buttonns:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  border-width: 1px 7px 1px 1px;
+}
+.buttonns:active {
+-webkit-box-shadow:inset rgba(0, 0, 0, 0.701961) 0px 7px 12px,rgba(0, 0, 0, 0.701961) 0px 2px 12px  ;
+text-shadow: rgb(0, 0, 0) 0px -2px 1px;
+margin-top: 1px;
+
+ body, *{
+ font-family: 'Open Sans', sans-serif!important;
+ font-size: 16px;
+ }
+
+    </style>
+</head>
+<body class="ksenka">
+
+
+<div class="container-fluid">
+    <div style="width:100%; height: 65px; background-color: #202022;">
+      <div style="width: 30%; height: 100%; background-color: #202022; text-align: center; float: left">
+          <img src="https://c.radikal.ru/c06/1801/1f/c7693cfcf92a.png" height="65px" width="65px" style="margin-top: -28px">
+          <font style="width: 100%; font-family: 'Exo 2', sans-serif; font-size: 270%; text-align: center; margin-left:10px" color="white">Bacoad</font>
+      </div>
+        {% if user.is_authenticated %}
+
+            <div class="menushka">
+                <a class="ahr" href="/index/logout/" style="font-family: 'Roboto Condense', sans-serif; font-size: 110%; padding: 15%"><font color="grey" >Выход</font></a>
+            </div>
+                {% else %}
+            <div class="menua">
+                <a class="ahr" href="/index/signup/" style="font-family: 'Roboto Condense', sans-serif; font-size: 110%"><font color="grey" >Регистрация</font></a>
+                <a class="ahr" href="/index/login/" style="font-family: 'Roboto Condensed', sans-serif; font-size: 110%"><font color="grey">Вход</font></a>
+            </div>
+                {% endif %}
+        </div>
+    <div style="width:85%; padding:0px; margin: 0px auto">
+        <form action="/index/search/" method="get">
+        <div class="row">
+            <div class="zagalovok" style="font-family: 'Roboto Condense', sans-serif; font-size: 330%; padding:8%;text-shadow:1px 1px 1px rgba(255,255,255,0.4)">
+                Животное - ваш лучший друг
+            </div>
+            <div class="texta" style="font-family: 'Roboto Condense', sans-serif; font-size: 10%; padding:5%;margin-top:-20px;">
+                <font style="text-shadow:1px 1px 1px rgba(255,255,255,0.3)" size="5">Bacoad - лучший сервис для поиска ваших новых друзей</font>
+            </div>
+        </div>
+
+        <div class="row flx" style="padding:0px; margin: 0px auto">
+            <div class="forflex">
+                <select class="custom-select" id="1" name="type" required
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите животное</option>
+                    <option>Собака</option>
+                    <option>Кошка</option>
+                </select>
+                <script>
+                    $('select').on('change', function() {
+                        if ($(this).val() == "Кошка") {
+                            var breeds = ['Без породы', 'Абиссинская', 'Австралийский мист', 'Азиатская (Табби)', 'Акринская', 'Американская жесткошёрстная', 'Американская короткошёрстная', 'Американский бобтейл длинношёрстный', 'Американский бобтейл короткошёрстный', 'Американский кёрл длинношёрстный', 'Американский кёрл короткошёрстный', 'Анатолийская', 'Аравийский мау', 'Балинезийская (Балийская)', 'Бенгальская', 'Бомбейская', 'Бразильская короткошёрстная', 'Британская длинношёрстная', 'Британская короткошёрстная', 'Бурма (Бурманская)', 'Бурмилла длинношёрстный', 'Бурмилла короткошёрстный', 'Гавана', 'Гималайская кошка', 'Девон рекс', 'Домашняя', 'Донской сфинкс', 'Египетская мау', 'Калифорнийская сияющая', 'Канаани', 'Карельский бобтейл длинношёрстный', 'Карельский бобтейл короткошёрстный', 'Кельтская (Европейская короткошёрстная)', 'Кимрик', 'Колорпойнт', 'Корат', 'Корниш рекс', 'Курильский бобтейл длинношёрстный', 'Курильский бобтейл короткошёрстный', 'Лаперм длинношёрстный', 'Лаперм короткошёрстный', 'Манчкин длинношёрстная', 'Манчкин короткошёрстная', 'Мейн-кун', 'Меконгский бобтейл', 'Минскин', 'Мэнкс (Мэнская кошка)', 'Наполеон', 'Невская маскарадная', 'Немецкий рекс', 'Нибелунг', 'Норвежская лесная', 'Орегон-рекс', 'Ориентальная длинношёрстная', 'Ориентальная короткошёрстная', 'Охос азулес', 'Охос азулес длинношёрстный', 'Оцикет', 'Персидская (Колорпойнт)', 'Петерболд', 'Пиксибоб длинношёрстный', 'Пиксибоб короткошёрстный', 'Рагамаффин', 'Русская голубая', 'Рэгдолл', 'Саванна', 'Священная бирманская', 'Сейшельская длинношёрстная', 'Сейшельская короткошёрстная', 'Селкирк рекс длинношёрстный', 'Селкирк рекс короткошёрстный', 'Серенгети', 'Сиамская', 'Сибирская', 'Сингапурская', 'Скоттиш страйт', 'Скоттиш фолд', 'Сноу-Шу', 'Сококе', 'Сомали', 'Сфинкс (Канадский)', 'Тайская', 'Тойгер', 'Тонкинская', 'Турецкая ангора', 'Турецкий ван', 'Украинский левкой', 'Уральский рекс длинношёрстный', 'Уральский рекс короткошёрстный', 'Форин Вайт', 'Хайленд фолд', 'Цейлонская', 'Чаузи', 'Шантильи Тиффаны', 'Шартрез', 'Эгейская', 'Экзотическая', 'Экспериментальная порода', 'Яванез (Яванская)', 'Японский бобтейл длинношёрстный', 'Японский бобтейл короткошёрстный'];
+                            for (var i=0; i<breeds.length; i++){
+                                $("#2").append("<option>" + breeds[i] + "</option>");
+                            }
+                        };
+                        if ($(this).val() == "Собака") {
+                            var breeds = ['Без породы', 'Австралийская короткохвостая пастушья собака', 'Австралийская овчарка', 'Австралийская пастушья собака', 'Австралийский келпи', 'Австралийский терьер', 'Австралийский шелковистый терьер', 'Австрийская гончая', 'Австрийский брудастый бракк', 'Австрийский пинчер', 'Азавак', 'Азорская пастушья собака', 'Аиди', 'Акита-ину', 'Алан', 'Алано', 'Алапахский бульдог', 'Альпийская таксообразная гончая', 'Аляскинский кли-кай', 'Аляскинский маламут', 'Американская акита', 'Американская эскимосская собака', 'Американский бандог', 'Американский бульдог', 'Американский водяной спаниель', 'Американский голый терьер', 'Американский кокер-спаниель', 'Американский мастиф', 'Американский питбультерьер', 'Американский стаффордширский терьер', 'Американский фоксхаунд', 'Анатолийская овчарка', 'Английская енотовая гончая', 'Английская овчарка', 'Английский бульдог', 'Английский водяной спаниель', 'Английский кокер-спаниель', 'Английский мастиф', 'Английский пойнтер', 'Английский сеттер', 'Английский спрингер-спаниель', 'Английский той-терьер', 'Английский фоксхаунд', 'Англо-французская малая гончая', 'Аппенцеллер зенненхунд', 'Аргентинский дог', 'Арденнский бувье', 'Артуазская гончая', 'Афганская борзая', 'Аффенпинчер', 'Баварская горная гончая', 'Бакхмуль', 'Барбет (собака)', 'Басенджи', 'Баскская овчарка', 'Бассет-хаунд', 'Бедлингтон-терьер', 'Белая швейцарская овчарка', 'Бельгийская овчарка', 'Бельгийский гриффон', 'Бергамская овчарка', 'Бернская гончая', 'Бернский зенненхунд', 'Бивер-йоркширский терьер', 'Бигль', 'Бишон фризе', 'Бладхаунд', 'Блю-лейси', 'Бобтейл', 'Болгарский барак', 'Болоньез', 'Большой вандейский бассет-гриффон', 'Большой вандейский гриффон', 'Большой швейцарский зенненхунд', 'Бордер-колли', 'Бордер-терьер', 'Бордоский дог', 'Бородатый колли', 'Босерон', 'Бостон-терьер', 'Бразильский терьер', 'Бразильский фила', 'Бретонский эпаньоль', 'Бриар (порода собак)', 'Брохольмер', 'Брюссельский гриффон', 'Буковинская овчарка', 'Бульдог кампейро', 'Бульдог Катахулы', 'Бульмастиф', 'Бультерьер', 'Бурбуль', 'Бурят-монгольский волкодав', 'Валенсийский ратер', 'Вандейский бассет-гриффон', 'Веймаранер', 'Вельш-корги', 'Вельш-спрингер-спаниель', 'Вельштерьер', 'Венгерская выжла', 'Вертельная собака', 'Вест-хайленд-уайт-терьер', 'Веттерхун', 'Волчья собака Сарлоса', 'Вольпино итальяно', 'Восточноевропейская овчарка', 'Восточносибирская лайка', 'Гаванский бишон', 'Гамильтонстёваре', 'Гампр', 'Гладкошёрстный фокстерьер', 'Глен оф Имаал терьер', 'Голландская овчарка', 'Голландский смоусхонд', 'Голубой гасконский бассет', 'Гончая Шиллера', 'Грейхаунд', 'Гренландская собака', 'Греческая овчарка', 'Грюнендаль', 'Далматин', 'Датско-шведская фермерская собака', 'Денди-динмонт-терьер', 'Джек-рассел-терьер', 'Дзёмон-сиба', 'Дирхаунд', 'Длинношерстная акита-ину', 'Длинношёрстный колли', 'Доберман', 'Дратхаар', 'Древер', 'Евразиер', 'Жесткошёрстный фокстерьер', 'Западносибирская лайка', 'Золотистый ретривер', 'Ирландский водяной спаниель', 'Ирландский волкодав', 'Ирландский красный сеттер', 'Ирландский мягкошёрстный пшеничный терьер', 'Ирландский терьер', 'Исландская собака', 'Испанская водяная собака', 'Испанский гальго', 'Испанский мастиф', 'Итальянский бракк', 'Итальянский спиноне', 'Йоркширский терьер', 'Ка-де-бо', 'Кавалер-кинг-чарльз-спаниель', 'Кавказская овчарка', 'Каи (порода собак)', 'Канарский дог', 'Кане-корсо', 'Као де кастро-лаборейро', 'Каракачанская собака', 'Карело-финская лайка', 'Карельская лайка', 'Карельская медвежья собака', 'Карликовый пинчер', 'Каталонская овчарка', 'Кеесхонд', 'Керн-терьер', 'Керри-блю-терьер', 'Кинг-чарльз-спаниель', 'Кисю (порода собак)', 'Китайская хохлатая собака', 'Кламбер-спаниель', 'Коикерхондье', 'Комондор', 'Континентальный бульдог', 'Континентальный той-спаниель', 'Корейский чиндо', 'Короткошёрстный колли', 'Котон-де-тулеар', 'Крашская овчарка', 'Кромфорлендер', 'Ксолоитцкуинтли', 'Кубинский дог', 'Кувас', 'Кури', 'Курцхаар', 'Курчавошёрстный ретривер', 'Лабрадор-ретривер', 'Лабрадудль', 'Лаготто-романьоло', 'Лангхаар', 'Ландсир', 'Ланкаширский хилер', 'Левретка', 'Лейкленд-терьер', 'Леонбергер', 'Леопардовая собака Катахулы', 'Лопарская оленегонная собака', 'Лхаса апсо', 'Майоркская овчарка', 'Малая львиная собака', 'Малая швейцарская гончая', 'Малые бельгийские собаки', 'Малый вандейский бассет-гриффон', 'Мальтезе Мальтийская болонка', '', 'Манчестер-терьер', 'Мареммо-абруццкая овчарка', 'Махореро', 'Меделянка', 'Миттельшнауцер', 'Мопс', 'Московская сторожевая', 'Муди', 'Неаполитанский мастиф', 'Немецкая овчарка', 'Немецкий боксёр', 'Немецкий вахтельхунд', 'Немецкий дог', 'Немецкий пинчер', 'Немецкий шпиц', 'Немецкий ягдтерьер', 'Ненецкая лайка', 'Новошотландский ретривер', 'Норботтен шпиц', 'Норвежский бухунд', 'Норвежский лундехунд', 'Норвежский серый элкхунд', 'Норвежский чёрный элкхунд', 'Норвич-терьер', 'Норфолк-терьер', 'Ньюфаундленд', 'Одис', 'Оттерхаунд', 'Пагль', 'Папийон', 'Парсон-рассел-терьер', 'Паттердейл-терьер', 'Пекинес', 'Перуанская голая собака', 'Пикардийская овчарка', 'Пиренейская горная собака', 'Пиренейская овчарка', 'Пиренейский мастиф', 'Поденко ибиценко', 'Поденко канарио', 'Польская гончая', 'Польская низинная овчарка', 'Польская подгалянская овчарка', 'Польский огар', 'Померанский шпиц', 'Португальская водяная собака', 'Португальская овчарка', 'Португальский поденгу', 'Пражский крысарик', 'Прямошёрстный ретривер', 'Пти-брабансон', 'Пудель', 'Пули', 'Пуми (порода собак)', 'Пхунсан', 'Раджапалайям (порода собак)', 'Ризеншнауцер', 'Родезийский риджбек', 'Ротвейлер', 'Румынская карпатская овчарка', 'Румынская миоритская овчарка', 'Русская гончая', 'Русская псовая борзая', 'Русская цветная болонка', 'Русский охотничий спаниель', 'Русский той', 'Русско-европейская лайка', 'Рюкю (порода собак)', 'Салюки', 'Самоедская собака', 'Сахалинский хаски', 'Северная Инуитская собака', 'Сенбернар', 'Сиба-ину', 'Сибирский хаски', 'Сикоку (порода собак)', 'Силихем-терьер', 'Скайтерьер', 'Словацкий копов', 'Словацкий чувач', 'Слюги', 'Среднеазиатская овчарка', 'Староанглийский бульдог', 'Староанглийский бульдог (заново созданный)', 'Стаффордширский бультерьер', 'Суссекс-спаниель', 'Схипперке', 'Тазы (порода собак)', 'Тайваньская собака', 'Тайган (порода собак)', 'Тайский бангку', 'Тайский риджбек', 'Такса', 'Течичи', 'Тибетский мастиф', 'Тибетский спаниель', 'Тибетский терьер', 'Торньяк', 'Тоса-ину', 'Уиппет', 'Фален', 'Фараонова собака', 'Фарфоровая гончая', 'Финская гончая', 'Финский лаппхунд', 'Финский шпиц', 'Фландрский бувье', 'Фокстерьер', 'Французский бульдог', 'Ханаанская собака', 'Харьер', 'Хеллефорсхунд', 'Ховаварт', 'Хоккайдо', 'Хорватская овчарка', 'Цвергпинчер', 'Цвергшнауцер', 'Чау-чау', 'Чёрный терьер', 'Чесапик-бей-ретривер', 'Чехословацкая волчья собака', 'Чешская пастушья собака', 'Чешский терьер', 'Чинук', 'Чирнеко дель Этна', 'Чихуахуа', 'Чукотская ездовая', 'Шапендуа', 'Шарпей', 'Шарпланинская овчарка', 'Шведский белый элкхунд', 'Шведский вальхунд', 'Шведский лаппхунд', 'Швейцарская гончая', 'Шелковистый виндхаунд', 'Шелти', 'Ши-тцу', 'Шотландский сеттер', 'Шотландский терьер', 'Энтлебухер зенненхунд', 'Эрдельтерьер', 'Эстонская гончая', 'Эштрельская овчарка', 'Южнорусская овчарка', 'Якутская лайка', 'Ямтхунд', 'Японский терьер', 'Японский хин', 'Японский шпиц'];
+                            for (var i=0; i<breeds.length; i++){
+                                $("#2").append("<option>" + breeds[i] + "</option>");
+                            }
+                        };
+                        if ($(this).val() == "Кошка") {
+                            var breeds = ["Котенок", "Молодая Кошка", "Взрослая кошка", "Пожилая кошка"];
+                            for (var i=0; i<breeds.length; i++){
+                                $("#4").append("<option>" + breeds[i] + "</option>");
+                            }
+                        };
+                        if ($(this).val() == "Собака") {
+                            var breeds = ["Щенок", "Молодая собака", "Взорлая собака", "Пожилая собака"]
+                            for (var i=0; i<breeds.length; i++){
+                                $("#4").append("<option>" + breeds[i] + "</option>");
+                            }
+                        };
+                    })
+                  </script>
+            </div>
+            <div class="forflex">
+                <select class="custom-select" id="2" name="breed"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите породу</option>
+                </select>
+            </div>
+            <div class="forflex">
+                <select class="custom-select" id="3" name="city"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите город</option>
+                    {% for city in cities %}
+                        <option>{{ city }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="forflex">
+                <select class="custom-select" id="4" name="age"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите возраст</option>
+                </select>
+            </div>
+            <div class="forflex">
+                <input class="custom-select" type="text" name='price' placeholder="Цена до ... руб">
+            </div>
+            <div style="margin:0 px; padding:0 px;">
+                <button type="submit" class="buttonns"
+                   style="height: 10%; width: 178px; margin-top: 0px; font-size: 40; text-decoration: none">
+                    <font style="font: 20px Arial;" size="6">Найти</font>
+                </button>
+            </div>
+        </div>
+        <div class="row flx sdf varg">
+            <div class="forflex">
+                <select class="custom-select" id="6" name="sex"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите пол</option>
+                    <option>Мальчик</option>
+                    <option>Девочка</option>
+                </select>
+            </div>
+            <div class="forflex">
+                <select class="custom-select" id="7" name="size"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите размер</option>
+                    <option>Маленький</option>
+                    <option>Средний</option>
+                    <option>Большой</option>
+                </select>
+            </div>
+            <div class="forflex">
+                <select class="custom-select" id="8" name="owner"
+                        style="font-family: 'Roboto Condensed', sans-serif;">
+                    <option value="">Выберите продавца</option>
+                    <option>Заводчик</option>
+                    <option>Приют</option>
+                </select>
+            </div>
+            <div class="forflex" style="font-family: 'Roboto Condensed', sans-serif;padding: 10px;">
+                    <input type="checkbox" id="box-2" unchecked name="competition">
+  				<label for="box-2" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; margin: 0px auto, "><font color=#202022>Только выставочные животные</font></label>
+            </div>
+            <div class="forflex" style="font-family: 'Roboto Condensed', sans-serif; padding: 10px;">
+
+                    <input type="checkbox" id="box-3" unchecked name="passport">
+  				<label for="box-3" style="font-family: 'Roboto Condensed', sans-serif; font-size: 120%; margin: 0px auto"><font color=#202022>Только с паспортом</font></label>
+            </div>
+            <div class="forflex">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div style=" width: 80%; float:left;" id="bbtn">
+            <div style="padding: 0px; margin: 0px auto; width:50%">
+                <a href="#" class="butt" style="height: 5%; width: 70%; font-size: 40; text-decoration: none">
+                    <div style="color: #778899; ">
+                        <font style="font-weight:500;text-shadow:1px 1px 1px rgba(255,255,255,0.3)" size="3">Расширенные параметры</font>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        </form>
+    </div>
+</div>
+<script>
+	var varg = document.querySelector('.sdf');
+	var bbtn = document.querySelector('#bbtn');
+
+	function toggle() {
+		if (varg.classList.contains('varg')) {
+			varg.classList.remove('varg');
+		}
+		else{
+			varg.classList.add('varg');
+		}
+	}
+	function show() {
+		toggle();
+	}
+	bbtn.onclick = show;
+
+</script>
+</body>
+</html>

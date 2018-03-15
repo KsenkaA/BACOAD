@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400'>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src={% static "jquery.min.js" %}></script>
+    <link href={% static 'new_registration.css' %} rel='stylesheet'>
+<script src={% static "jquery.maskedinput.min.js" %}></script>
+</head>
+<body>
+	<div class='header'>
+		<div class='logo'>
+			<img src="http://www.picshare.ru/uploads/180224/KW1NsxDhiK.png" style="height: 60px; width: 330px;padding: 5px" />
+		</div>
+	</div>
+  	<div class='container'>
+  		<div class='content'>
+        <div style='text-align: center;'>&nbsp;</div>
+        <p style='text-align: center; margin: 0px;'>
+  		  <img src='http://priscree.ru/img/48abd3c8e88ac0.png' class='icon' />
+        </p>
+        <p class='auth'>Регистрация</p>
+        <form method="post" action="/index/signup/"> {% csrf_token %} 
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Придумайте ник</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="text" class="form" name='username' placeholder="Ник" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Введите номер телефона</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="text" class="form" id='phone' name='phone_number' placeholder="Номер телефона" style="font-family: 'Comfortaa', sans-serif; " required> 
+            <script>
+              $(function(){
+                $("#phone").mask("+7 (999) 999-99-99");
+              });
+            </script>
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;">Выберете роль</label>
+          </p>
+          <p class='pre_text'>  
+            <div class="form__select">
+              <select name="who" required>
+                <option value="Частное лицо">Частное лицо</option>
+                <option value="Заводчик">Заводчик</option>
+                <option value="Приют">Приют</option>
+              </select>
+            </div>
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Введите имя</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="text" class="form" name='first_name' placeholder="Имя" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Введите фамилию</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="text" class="form" name='last_name' placeholder="Фамилия" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Введите email</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="email" class="form" name='email' placeholder="Email" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Придумайте пароль</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="password" class="form" name='password1' placeholder="Пароль" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p style='width: 80%; margin: 0px auto; padding-top: 3%;'>
+            <label style="font-family: 'Comfortaa', sans-serif; font-size: 120%; color: #265259;" >Повторно введите пароль</label>
+          </p>
+          <p class='pre_text'>  
+            <input type="password" class="form" name='password2' placeholder="Пароль" style="font-family: 'Comfortaa', sans-serif; " required> 
+          </p>
+          <p class='pre_text' style="padding-top: 6%; padding-bottom: 10%">  
+            <button type="submit" class='sub'>Зарегистрироваться</button>
+          </p>
+        </form>
+      </div>
+  		</div>
+  	</div>
+  <script src="js/index.js"></script>
+</body>
+</html>
